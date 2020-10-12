@@ -26,7 +26,7 @@
     "gulp": "^4.0.2",
     "gulp-if": "^3.0.0",
     "gulp-livereload": "^4.0.2",
-    "respec": "github:w3c/respec",
+    "respec": "^25.17.0",
     "through2": "^4.0.2"
   }
 }
