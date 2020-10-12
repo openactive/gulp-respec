@@ -6,9 +6,9 @@ This package provides gulp tasks to render ReSpec files
 Simply add a file in the root of your specification repository with the name `Gulpfile.js`, and the contents:
 ```javascript
 const gulp = require('gulp');
-const {render, express, watch} = require('gulp-respec')();
+const {render, serve, watch} = require('gulp-respec')();
 
-gulp.task('default', gulp.series(render, express, watch));
+gulp.task('default', gulp.series(render, serve, watch));
 ```
 
 ## Configuration
@@ -24,5 +24,5 @@ const {render, serve, watch} = require('gulp-respec')({
   outputDirectory: 'render', // Output directory of rendered spec
 });
 
-gulp.task('default', gulp.series(render, express, watch));
+gulp.task('default', gulp.series(render, serve, watch));
 ```
