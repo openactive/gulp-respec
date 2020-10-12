@@ -48,7 +48,7 @@ module.exports = function ({
     var express = require('express');
     var app = express();
     app.use(require('connect-livereload')({port: LIVERELOAD_PORT }));
-    app.use(express.static(__dirname));
+    app.use(express.static('.'));
     app.listen(SERVER_PORT, '0.0.0.0');
     livereload.listen({ basePath: '.', port: LIVERELOAD_PORT });
   }
