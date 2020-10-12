@@ -12,10 +12,10 @@ npm install github:openactive/gulp-respec --save
 Then simply add a file in the root of your specification repository with the name `Gulpfile.js`, and the contents:
 ```javascript
 const gulp = require('gulp');
-const {render, serve, watch} = require('gulp-respec')();
+const {render, serve, watch, renderOrFail} = require('gulp-respec')();
 
 gulp.task('default', gulp.series(render, serve, watch));
-gulp.task('render', render));
+gulp.task('render', renderOrFail));
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ gulp render
 Additional configuration parameters are available, as follows:
 ```javascript
 const gulp = require('gulp');
-const {render, serve, watch} = require('gulp-respec')({
+const {render, serve, watch, renderOrFail} = require('gulp-respec')({
   serverPort: 4000, // Port to serve local copy of specification
   liveReloadPort: 35729, // Port to trigger live reload of spec
   inputDirectory: 'EditorsDraft', // Directory of spec
@@ -47,4 +47,5 @@ const {render, serve, watch} = require('gulp-respec')({
 });
 
 gulp.task('default', gulp.series(render, serve, watch));
+gulp.task('render', renderOrFail));
 ```

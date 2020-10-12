@@ -34,6 +34,12 @@ module.exports = function ({
     }
   }
 
+  const renderOrFail = function () {
+    return gulp.src([`${INPUT_DIRECTORY}/${INPUT_RESPEC_FILENAME}.html`, `${INPUT_DIRECTORY}/*.png`])
+      .pipe(gulpif(file => file.extname === '.html', through.obj(renderRespecFile)))
+      .pipe(gulp.dest(OUTPUT_DIRECTORY));
+  }
+
   const render = function () {
     return gulp.src([`${INPUT_DIRECTORY}/${INPUT_RESPEC_FILENAME}.html`, `${INPUT_DIRECTORY}/*.png`])
       .pipe(gulpif(file => file.extname === '.html', through.obj(renderRespecFile)))
@@ -64,6 +70,7 @@ module.exports = function ({
   }
 
   return {
+    renderOrFail,
     render,
     serve,
     watch,
