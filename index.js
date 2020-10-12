@@ -3,9 +3,8 @@
 const gulp = require('gulp'),
       gulpif = require('gulp-if'),
       livereload = require('gulp-livereload'),
-      through = require('through2');
-
-const fetchAndWrite = require("./node_modules/respec/tools/respecDocWriter.js").fetchAndWrite;
+      through = require('through2'),
+      { fetchAndWrite } = require('respec');
 
 module.exports = function ({
   expressPort,
