@@ -1,6 +1,8 @@
 # gulp-respec
 This package provides gulp tasks to render ReSpec files, which provides a live preview during editing.
 
+A rendered HTML copy of the specification is outputted to `./render/` by default. 
+
 ## Installation
 
 Install `gulp` and this library:
@@ -25,10 +27,8 @@ To run during development, simply use the command:
 gulp
 ```
 
-To run in CI, simply use the following commands as part of your CI script (the first two lines for GitHub Actions only):
+To run in CI, simply use the following commands as part of your CI script:
 ```sh
-export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
-export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
 npm install
 gulp render
 ```
