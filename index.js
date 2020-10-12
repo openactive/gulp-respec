@@ -12,7 +12,7 @@ module.exports = function ({
   inputDirectory,
   inputRespecFilename,
   outputDirectory,
-}) {
+} = {}) {
   const EXPRESS_PORT = expressPort || 4000;
   const LIVERELOAD_PORT = liveReloadPort || 35729;
   const INPUT_DIRECTORY = inputDirectory || 'EditorsDraft'
@@ -44,7 +44,7 @@ module.exports = function ({
       .pipe(livereload());
   }
 
-  const express = function () {
+  const express = async function () {
     var express = require('express');
     var app = express();
     app.use(require('connect-livereload')({port: LIVERELOAD_PORT }));
