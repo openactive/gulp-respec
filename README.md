@@ -16,9 +16,9 @@ gulp.task('default', gulp.series(render, express, watch));
 Additional configuration parameters are available, as follows:
 ```javascript
 const gulp = require('gulp');
-const {render, express, watch} = require('gulp-respec')({
-  expressPort: 4000, // Port to serve local specification
-  liveReloadPort: 35729, // Port to allow live reload of spec
+const {render, serve, watch} = require('gulp-respec')({
+  serverPort: 4000, // Port to serve local copy of specification
+  liveReloadPort: 35729, // Port to trigger live reload of spec
   inputDirectory: 'EditorsDraft', // Directory of spec
   inputRespecFilename: 'edit', // Filename of spec (e.g. 'edit' for 'edit.html')
   outputDirectory: 'render', // Output directory of rendered spec
