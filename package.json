@@ -1,0 +1,32 @@
+{
+  "name": "gulp-respec",
+  "version": "1.0.0",
+  "description": "Gulp tasks to render ReSpec files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openactive/gulp-respec.git"
+  },
+  "keywords": [
+    "gulp",
+    "ReSpec"
+  ],
+  "author": "Nick Evans (@nickevansuk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openactive/gulp-respec/issues"
+  },
+  "homepage": "https://github.com/openactive/gulp-respec#readme",
+  "dependencies": {
+    "connect-livereload": "^0.5.4",
+    "express": "^4.13.4",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-livereload": "^4.0.2",
+    "respec": "github:w3c/respec",
+    "through2": "^4.0.2"
+  }
+}
