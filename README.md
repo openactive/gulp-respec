@@ -3,13 +3,25 @@ This package provides gulp tasks to render ReSpec files, which provides a live p
 
 ## Usage
 
-Simply add a file in the root of your specification repository with the name `Gulpfile.js`, and the contents:
+Install `gulp` and this library:
+```sh
+npm install gulp --save
+npm install github:openactive/gulp-respec --save
+```
+
+Then simply add a file in the root of your specification repository with the name `Gulpfile.js`, and the contents:
 ```javascript
 const gulp = require('gulp');
 const {render, serve, watch} = require('gulp-respec')();
 
 gulp.task('default', gulp.series(render, serve, watch));
 ```
+
+To run, simply use the command:
+```sh
+gulp
+```
+
 
 ## Configuration
 
