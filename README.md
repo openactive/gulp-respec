@@ -1,5 +1,5 @@
 # gulp-respec
-This package provides gulp tasks to render ReSpec files
+This package provides gulp tasks to render ReSpec files, which provides a live preview during editing.
 
 ## Usage
 
