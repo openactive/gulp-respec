@@ -16,8 +16,11 @@ Then simply add a file in the root of your specification repository with the nam
 const gulp = require('gulp');
 const {render, serve, watch, renderOrFail} = require('gulp-respec')();
 
+// For use in development
 gulp.task('default', gulp.series(render, serve, watch));
-gulp.task('render', renderOrFail));
+
+// For use by CI
+gulp.task('render', renderOrFail);
 ```
 
 ## Usage
