@@ -24,7 +24,7 @@ module.exports = function ({
     console.log('Rendering ReSpec: ' + src);
     try {
       const html = await fetchAndWrite(src,
-        "",
+        "", // Emptry string will cause fetchAndWrite to return HTML
         { haltOnError: false, haltOnWarn: false },
         { timeout: 30000 });
       file.contents = new Buffer.from(html);
