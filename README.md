@@ -1,7 +1,7 @@
 # gulp-respec
-This package provides gulp tasks to render ReSpec files, which provides a live preview during editing.
+This package provides gulp tasks to render ReSpec files, which provides a live preview during editing, and ReSpec rendering for CI.
 
-A rendered HTML copy of the specification is outputted to `./render/` by default. 
+A rendered HTML copy of the `/EditorsDraft/` specification is outputted to `./render/` by default.
 
 ## Installation
 
